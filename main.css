@@ -1,0 +1,319 @@
+@charset "utf-8";
+/*
+font-family: 'Noto Sans JP', sans-serif;
+font-family: 'Noto Serif JP', serif;
+font-family: 'Pacifico', cursive;
+*/
+html {
+    font-size: 62.5%; /* 10px */
+}
+body {
+    margin: 0;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 1.4em; /* 14px */
+    color: #333;
+    background-color: rgba(168, 216, 185, 0.3); /* #A8D8B9 */
+    }
+body, div, p, h1, h2, h3, h4, ul, figure {
+    margin:0;
+    padding:0;
+}
+p, td, th, li {
+    line-height: 1.7;
+}
+img {
+    width: 100%;
+    height: auto;
+}
+ul .toggle {
+    display: none;
+    list-style-type: none;
+}
+
+/* link */
+a {
+    color: #4D5139;
+    text-decoration: none;
+}
+
+/* /link */
+
+.img-responsive {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+/* h */
+h1 {
+    font-family: 'Pacifico', Noto Sans JP;
+    font-size: 1.5em;
+    margin-bottom: 1rem;
+}
+.home-h2 {
+    font-family: 'Pacifico', Noto Sans JP;
+    font-size: 1.7em; 
+    position: relative;
+    margin: .4em;
+    padding: .6em;
+    width: 200px;
+    background: #e0edff;
+}
+.home-h2:after {
+    position: absolute;
+    content: '';
+    top: 100%;
+    left: 30px;
+    border: 15px solid transparent;
+    border-top: 15px solid #e0edff;
+    width: 0;
+    height: 0;
+}
+
+.container {
+    margin: 0 auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    max-width: 1000px;
+}
+@media screen and (min-width: 768px) {
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+/*============ header ============*/
+header {
+    font-family: 'Pacifico', Noto Sans JP;
+    font-size: 1.7em;
+    background: rgba(134, 166, 151, 0.8); /* #86A697 */
+    width: 100%;
+    height: 86px;
+}
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.fadeIn {
+    animation: fadeIn;
+    animation-duration: 5s; 
+}
+/* header,nav を固定 */
+@media screen and (min-width: 768px){
+    .position-lock {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+}
+
+/*============ navigation ============*/
+nav {
+    background: rgba(134, 166, 151, 0.8);
+    text-align: center;
+    width: 100%;
+    height: 47px;
+}
+.navbar {
+    display: flex; /* ナビゲーション横並び */
+    margin: 0;
+    padding: 0.8em;
+    list-style-type: none;
+}
+.navbar a {
+    font-family: 'Pacifico', Noto Sans JP;
+    font-size: 1.7em;
+    display: block;
+    padding: 0.1em 1em;
+    text-decoration: none;
+}
+.navbar a:hover {
+    color: #FCFAF2;
+    transition: all 0.2s ease;
+}
+
+@media screen and (min-width: 768px) {
+    .navbar {
+        display: flex !important;
+    }
+    .navbar li {
+        flex: 1 1 auto;
+        text-align: center;
+    }
+    .navbar a.nav-current {
+        background: #efefef;
+    }
+}
+
+/*============ main layout ============*/
+main {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background: #FCFAF2; 
+}
+
+@media screen and (min-width: 768px) {
+    main {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+.news {
+    border: 1px dashed #4D5139;
+    margin-top: 1.5em;
+    padding: .2em;
+}
+ul {
+    list-style-type: none;
+}
+/*============ about ============*/
+.about {
+    margin-top: 2em;
+}
+.container .flexbox {
+    display: flex;
+    flex-flow: column;
+    margin-top: 1em;
+}
+@media only screen and (min-width:768px) {
+    .container .flexbox {
+    display: flex;
+    flex-flow: row;
+    margin-top: .7em;
+    }
+}
+    .about img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    margin-top: .6em;  
+}
+ h2 {
+    font-family: 'Pacifico', Noto Sans JP;
+    font-size: 2em;
+}
+.about h3 {
+    font-family: 'Noto Serif JP', serif;
+    font-weight: 200;
+    font-size: 1.5em;
+}
+/*============ /about ============*/
+
+/*============ menu ============*/
+
+
+/* animationに10pxずらす */
+.menuimage {
+    display: flex;
+}
+.menuimage img {
+    width: 180px;
+    height: 180px;
+}
+
+/*============ /menu ============*/
+
+/*============ access ============*/
+.map {
+    margin-top: 2em;
+}
+.map h2 {
+    font-family: 'Pacifico', Noto Sans JP;
+    margin-bottom: 1em;
+}
+.information {
+    margin: 6em;
+    padding: 2em;
+    border: 1px dashed #4D5139;
+    min-width: 200px;
+    line-height: 1.5;
+}
+.information p {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 300;
+}
+/*============ /access ============*/
+
+/*============ contact ============*/
+
+input, textarea {
+    box-sizing: border-box; 
+}
+.submitbutton {
+    margin: 1.5em;
+    text-align: center;
+}
+.required {
+    padding: .5em;
+    font-size: .8em;
+    color: #f00;
+}
+form
+    { padding: .5em; }
+input[type="text"],[type="email"] {
+    width: 50%;
+    margin: .5em 0;
+    border: 1px solid #ccc;
+    color: #333;
+    border-radius: 5px;
+}
+textarea {
+    width: 50%;
+    height: 200px;
+    margin: .5em;
+    border: 1px solid #ccc;
+    color: #333;
+    border-radius: 5px;
+    }
+input[type="submit"] {
+    padding: 1em 2em;
+    color: #fff;
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+    background: #f12711;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #f5af19, #f12711);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #f5af19, #f12711); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    cursor: pointer;
+}
+input[type="submit"]:hover {
+    background: #f12711;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #f5af19, #f12711);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #f5af19, #f12711); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+/*============ /contact ============*/
+
+
+/*============ footer ============*/
+footer {
+    background: rgba(134, 166, 151, 0.1);
+    font-family: 'Pacifico', cursive;
+    color: #4D5139;
+    text-align: center;
+}
+.footer-container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.footer-nav {
+    list-style-type: none;
+}
+.footer-nav li {
+    display: inline;
+    padding: 0 1rem 1rem;
+}
+.footer-nav a {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 1em;
+    font-weight: 300;
+    text-decoration: none;
+}
+.footer-nav a:hover {
+    opacity: 0.5;
+}
+.footer-copyright {
+    font-size: 1em;
+}
